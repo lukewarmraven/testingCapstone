@@ -27,6 +27,7 @@ locationList = [
     {"lat": 14.652702, "lng": 121.099183},
     {"lat": 14.655260, "lng": 121.101168}
 ]
+
 normalData = [
     {"name":"Raven Quinto",
      "age":70,

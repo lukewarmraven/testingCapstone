@@ -13,7 +13,8 @@ lat = data['lat'].tolist()
 lng = data['lng'].tolist()
 result = data['result'].tolist()
 
-colors = ['red','blue','green']
+# add colors if u add another cluster
+colors = ['red','blue','green','violet','yellow','orange','pink','white','black','brown']
 clusterColor = [colors[cluster] for cluster in result]
 
 gmap1 = gmplot.GoogleMapPlotter(14.660915632697726, 121.10051851107902,15,apikey=api_key)
