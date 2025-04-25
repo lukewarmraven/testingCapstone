@@ -2,13 +2,17 @@ import pandas as pd
 import gmplot
 #from clustering import normal
 # my goal is to not import from the clustering file and instead access the csv produced from there
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 data = pd.read_csv('normalClustered.csv')
 
 # trying to map them in google maps
 import gmplot
 
-api_key = "AIzaSyDi9vaie4KqH6Lu7RvZE9LPBLKg-Sm0CFU"
+api_key = os.getenv('API_KEY')
 lat = data['lat'].tolist()
 lng = data['lng'].tolist()
 result = data['result'].tolist()

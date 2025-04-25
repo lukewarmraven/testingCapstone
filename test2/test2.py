@@ -5,7 +5,10 @@ from tkinter import messagebox
 import googlemaps
 from flask import Flask, render_template_string, request
 from threading import Thread
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 ############# FLASK IMPLEMENTATION ###########
 location_data = {"lat": None, "lng": None}
 
@@ -51,7 +54,7 @@ flask_thread = Thread(target=run_flask)
 flask_thread.daemon = True
 flask_thread.start()
 
-api_key = "AIzaSyDi9vaie4KqH6Lu7RvZE9LPBLKg-Sm0CFU"
+api_key = os.getenv("API_KEY")
 gmaps = googlemaps.Client(key=api_key)
 
 def reverse_geocode(lat, lng):
