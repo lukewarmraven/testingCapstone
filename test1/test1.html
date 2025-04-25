@@ -15,10 +15,8 @@
   <p id="output"></p>
   <div id="map"></div>
 
-  <script>
-    require('dotenv').config();
-    const apikey = process.env.API_KEY;
-
+  <script>    
+  // i can't fully implement an keyless API link since it fucks with the mapping for some reason so we have to make do with what's available
     let map;
     let marker;
 
@@ -69,7 +67,7 @@
 
   <!-- Google Maps Script (async loading with your API key) -->
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=${apikey}">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDi9vaie4KqH6Lu7RvZE9LPBLKg-Sm0CFU">
   </script>
 </body>
 </html>
