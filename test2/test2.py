@@ -72,7 +72,7 @@ def on_button_click():
         lat = location_data['lat']
         lng = location_data['lng']
         address = reverse_geocode(lat, lng)
-        coordLabel.config(text=f"Location: {address}")
+        coordLabel.config(text=f"Location: {address}\n Coordinates: {lat} {lng}")
     else:
         messagebox.showerror("Error", "Failed to get location from browser.")
 
